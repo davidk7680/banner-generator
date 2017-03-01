@@ -7,18 +7,27 @@
     <script>
         // custom JS/jquery
         $(function(){
-            $(":input")
-            
+            $("button").click(function(){
+              var name = ().val()
+            });
+            $("h1").html("My name is " + name + ".");
         });
     </script>
+    <style>
+      
+    </style>
   </head>
   <body>
       <p>
         <form action="">
-          Name: <input type="text" ><br>
-          Phone: <input type="tel" >
-          
+          Name: <input type="text" id="name"><br>
+          Phone Number: <input type="tel" ><br>
+          Occupation: <input type="text" id="occupation">
         </form>
+        <button>Create your business card!</button>
       </p>
+      <div>
+        <h1></h1>
+      </div>
   </body>
 </html>
