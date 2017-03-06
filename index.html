@@ -7,27 +7,51 @@
     <script>
         // custom JS/jquery
         $(function(){
-            $("button").click(function(){
-              var name = ().val()
+            $('#submit').click(function(){
+              var name = $('#name').val();
+              var tel = $('#tel').val();
+              var occupation = $('#occupation').val();divv
+
+              $('h1').html("My name is " + name);
+              $('h2').html("Contact me at " + tel);
+              $('h3').html("I work as a(n) " + occupation);
+
             });
-            $("h1").html("My name is " + name + ".");
+            $('#blue').click(function(){                      
+              $('div').css('background-color', blue);
+            });
+            $('#red').click(function(){                      
+              $('div').css('background-color', red);
+            });
+            $('#yellow').click(function(){                      
+              $('div').css('background-color', yellow);
+            });
         });
     </script>
     <style>
-      
+      div{
+        text-align: center;
+        border-style: solid;
+        background-color: white;
+      }
     </style>
   </head>
   <body>
       <p>
         <form action="">
-          Name: <input type="text" id="name"><br>
-          Phone Number: <input type="tel" ><br>
-          Occupation: <input type="text" id="occupation">
+          Name: <input type="text" id="name" placeholder="Name"><br>
+          Phone Number: <input type="tel" id="tel" placeholder="###-###-####"><br>
+          Occupation: <input type="text" id="occupation" placeholder="Your job"><br>
         </form>
-        <button>Create your business card!</button>
+        <button id="submit">Create your business card!</button><br>
+        <button id="blue">Click to make the background blue</button><br>
+        <button id="red">Click to make the background red</button><br>
+        <button id="yellow">Click to make the background yellow</button>
       </p>
       <div>
         <h1></h1>
+        <h2></h2>
+        <h3></h3>
       </div>
   </body>
 </html>
